@@ -1,0 +1,23 @@
+<button mat-button *ngIf="variant === 'flat'"
+  [color]="color"
+  [disabled]="disabled"
+  [type]="type">
+  <mat-icon *ngIf="icon">{{ icon }}</mat-icon>
+  {{ text }}
+</button>
+
+<button mat-raised-button *ngIf="variant === 'raised'"
+  [color]="color"
+  [disabled]="disabled"
+  [type]="type">
+  <mat-icon *ngIf="icon">{{ icon }}</mat-icon>
+  {{ text }}
+</button>
+
+<button mat-stroked-button *ngIf="variant === 'stroked'"
+  [color]="color"
+  [disabled]="disabled"
+  [type]="type">
+  <mat-icon *ngIf="icon">{{ icon }}</mat-icon>
+  {{ text }}
+</button>

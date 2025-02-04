@@ -1,1 +1,25 @@
-<p>login works!</p>
+<div class="login-container">
+  <h2>Welcome!</h2>
+  <div>Sign in and get started</div>
+  <form [formGroup]="form" (ngSubmit)="submitForm()" class="form-box">
+    <app-input
+      label="Email"
+      type="email"
+      placeholder="Enter email"
+      [control]="form.controls.email">
+    </app-input>
+    <app-input
+      label="Password"
+      type="password"
+      placeholder="Enter password"
+      [control]="form.controls.password">
+    </app-input>
+    <app-button
+      text="Sign in"
+      color="primary"
+      variant="raised"
+      type="submit"
+      [disabled]="form.invalid">
+    </app-button>
+  </form>
+</div>

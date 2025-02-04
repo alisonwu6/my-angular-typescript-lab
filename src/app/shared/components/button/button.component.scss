@@ -1,0 +1,13 @@
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  mat-icon {
+    font-size: 20px;
+  }
+}
