@@ -1,0 +1,46 @@
+// /* Make the container take the full height */
+mat-sidenav-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+mat-sidenav {
+  width: 250px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+mat-sidenav-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > div:first-child {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.content-section {
+  padding: 20px;
+  background-color: #f3ebeb;
+  height: 100vh;
+}
+
+footer {
+  background-color: #333;
+  width: 100%;
+  margin-top: auto;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}

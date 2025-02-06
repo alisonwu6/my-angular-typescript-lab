@@ -1,0 +1,42 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-nav-list>
+      <a *ngFor="let item of menuItems" mat-list-item [routerLink]="item.route">
+        <mat-icon>{{ item.icon }}</mat-icon>
+        <span>{{ item.title }}</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div>
+        <button mat-icon-button (click)="toggleSidenav()">
+          <mat-icon>menu</mat-icon>
+        </button>
+
+        <span class="title">My Cool App</span>
+      </div>
+      <div>
+        <button mat-icon-button (click)="toggleTheme()">
+          <mat-icon>{{ isDarkMode ? 'dark_mode' : 'light_mode' }}</mat-icon>
+        </button>
+
+        <button mat-icon-button>
+          <mat-icon>notifications</mat-icon>
+        </button>
+
+        <button mat-icon-button>
+          <mat-icon>account_circle</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+    <div class="content-section">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+  
+</mat-sidenav-container>
+<footer>
+  Copyright © Wudi Co., Ltd. All Rights Reserved.
+</footer>
