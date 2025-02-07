@@ -1,0 +1,68 @@
+<h2>Fundamental</h2>
+
+<div class="section-one">
+  <h1>Property Binding & Interpolation</h1>
+  <p>Interpolation treats all the data types including boolean value as a string.</p>
+  <input
+    type="text"
+    class="styled-input"
+    value="{{ inputValue }}"
+    disabled="{{ isDisabled }}" />
+  <!-- {{  }} -> Interpolation converts the string value to a truthy value leading disabled=true showing disabled style -->
+
+  <br />
+  <input
+    type="text"
+    class="styled-input"
+    [value]="inputValue"
+    [disabled]="isDisabled" />
+  <!-- data binding -> disabled=false showing editable style -->
+
+  <br />
+
+  <!-- Event Binding -->
+  <button type="submit" (click)="display('Hello')">Click to trigger an event!</button>
+</div>
+
+<hr />
+
+<div class="container">
+  <h1>Counter Example</h1>
+  <div class="btn-container">
+    <button (click)="counter('decrement')">-</button>
+    <p>{{ count }}</p>
+    <button (click)="counter('increment')">+</button>
+  </div>
+</div>
+
+<hr />
+
+<!-- other mouse related event -->
+<h1 (mouseup)="dblIncrement()">dblIncrement: {{ count }}</h1>
+<!-- 
+dblclick
+mousedown
+-->
+
+<!-- $event -->
+<input type="text" (keypress)="onKeyPress($event)">
+
+<button (click)="onClick($event)">Click Me</button>
+
+<hr />
+<!-- Checking shift key status (Key event binding) -->
+<input type="text" (keydown.shift.y)="isShift()" placeholder="isShift: keydown.shift.y" />
+
+<br />
+<br />
+<input type="text" (keydown)="isShift_($event)" placeholder="isShift_: keydown.shift.y" />
+
+
+<hr />
+
+<div class="counter-container" tabindex="0" (keydown)="onKeyDown($event)">
+  <p class="counter">Counter: {{ counterNum }}</p>
+  <p class="instruction">
+    Use Up and Down arrow keys to <i><b>increment/decrement</b></i> the counter.
+  </p>
+</div>

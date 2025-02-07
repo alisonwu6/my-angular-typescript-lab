@@ -1,0 +1,41 @@
+<h2>Two way binding!</h2>
+
+<!-- 
+Two-way binding
+- Typically achieved using the ngModel directive. -> ngModel is part of FormsModule library
+- A combination of both property binding & event binding.  
+-->
+
+<!-- (1) property binding -->
+<input type="text" [(ngModel)]="staticInput" placeholder="staticInput" />
+<br /><br />
+<input type="text" [(ngModel)]="dynamicInput" placeholder="dynamicInput" />
+<h1>{{ dynamicInput }}</h1>
+
+<!-- (2) event binding -->
+<!-- <input (ngModelChange)="staticInput = $event" /> -->
+
+<!-- 
+<input [(ngModel)]=[ngModel]=(ngModelChange)="modelProperty">
+This is very essential, as it not only binds the value of the HTML 
+form controls but also stores them in a variable which can be used 
+whenever required. 
+-->
+
+
+<!-- 
+- Property Binding:
+<input [value]="name">
+
+- Event Binding:
+<button (click)= "($event)">Click Me</button>
+
+- Two-way binding: <input type="text"
+I (ngModel) ]="dynamicInput"/> 
+-->
+
+<hr />
+<!-- 2-24 -->
+<input type="text" [(ngModel)]="inputVal" placeholder="inputVal" /> <br /><br />
+<button type="submit" (click)="show()">Show</button>
+<h1>{{ dynamicVal }}</h1>

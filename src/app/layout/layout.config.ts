@@ -1,5 +1,8 @@
 export const NAV_MENU = [
-  { title: 'To Do List', icon: 'list', route: '/todo' },
-  { title: 'Dashboard', icon: 'dashboard', route: '/dashboard' },
-  { title: 'Users', icon: 'people', route: '/users' },
+  { title: 'Fundamental', icon: '', route: '/fundamental' },
+  { title: 'Template Driven Forms', icon: '', route: '/template-driven-form' },
+  { title: 'Cart Calculation', icon: '', route: '/cart-calculation' },
+  { title: 'To Do List', icon: '', route: '/todo' },
+  { title: 'Dashboard', icon: '', route: '/dashboard' },
+  { title: 'Users', icon: '', route: '/users' },
 ];
