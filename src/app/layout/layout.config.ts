@@ -1,4 +1,5 @@
 export const NAV_MENU = [
+  { title: 'Portfolio', icon: '', route: '/portfolio' },
   { title: 'Fundamental', icon: '', route: '/fundamental' },
   { title: 'Template Driven Forms', icon: '', route: '/template-driven-form' },
   { title: 'Cart Calculation', icon: '', route: '/cart-calculation' },
