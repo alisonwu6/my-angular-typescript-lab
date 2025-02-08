@@ -1,0 +1,129 @@
+<h2>NgIf display and hidden</h2>
+<button (click)="display = !display">Show</button>
+<span *ngIf="display">Hello NgIf</span>
+
+<hr />
+<h2>Conditional NgIf statement</h2>
+<div *ngIf="num > 0">{{ num }} is greater than 0</div>
+<div *ngIf="num < 0">{{ num }} is less than 0</div>
+<div *ngIf="num == 0">Number is 0</div>
+
+<hr />
+<!-- 3-31 - trackBy function -->
+<!-- <div *ngFor="let item of items; index as i;"> -->
+<h2>TrackBy function</h2>
+<div *ngFor="let item of items; trackBy: trackById;">
+  <p>{{ item.id }}.{{ item.name }}</p>
+</div>
+<button (click)="updateItem()">updateItem</button>
+
+<hr />
+<h2>NgSwitch</h2>
+<span [ngSwitch]="age">
+  <p *ngSwitchCase="age < 18">
+    Your are under 18.
+  </p>
+  <p *ngSwitchCase="18">
+    Congrets! You're now {{ age }}
+  </p>
+  <p *ngSwitchDefault>
+    Age {{ age }} is a good start to explore the world.
+  </p>
+</span>
+
+<div class="container">
+  <label>Enter your age: </ label>
+    <input type="text" (input)="checkEligibility()" [(ngModel)]="age" />
+    <div [ngSwitch]="isEligible">
+      <p *ngSwitchCase="true">You are eligible to vote</p>
+      <p *ngSwitchDefault>You are not eligible to vote !</p>
+    </div>
+</div>
+
+<hr />
+
+<h2>Attribute directive</h2>
+<p [ngClass]="updateStyles">This is an example of ngClass directive</p>
+
+<br />
+
+<p [ngClass]="['updateStyles', 'italicText', 'boldText']">This is an example of ngClass directive</p>
+
+<br />
+
+<input
+  type="text"
+  placeholder="Enter text here..."
+  (input)="textInput($event)"
+  [ngClass]="{ txt: hasText}">
+
+<hr />
+<h2>36. Task - Toggle functionality using ngClass</h2>
+<button (click)="toggleMode()">
+  {{
+  colorMode === "lightMode" ? "Switch To Dark Mode" : "Switch To Light Mode"
+  }}
+</button>
+<div class="box" [ngClass]="colorMode">
+  <h1>Light Mode</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus
+    consequuntur odit dolor sequi pariatur aperiam fugiat ullam eos eveniet.
+    Quaerat quia nostrum vel. Atque eaque animi eos aliquid, minus culpa?
+  </p>
+</div>
+<div class="box" [ngClass]="colorMode">
+  <h1>Dark Mode</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis magni
+    quae minima nesciunt recusandae aspernatur atque minus eaque expedita vero
+    rem, molestiae repellendus soluta sunt ut laboriosam harum animi. Ut?
+  </p>
+</div>
+
+<!-- 37. Attribute Directives [ngStyle] -->
+<h2>37. Attribute Directives [ngStyle]</h2>
+
+<!-- inline static -->
+<div style="text-alignL center">
+  <!-- [ngStyle] is dynamic -->
+  <p [ngStyle]="{color: hasText ? 'seagreen' : 'red'}">
+    Example of [ngStyle] directive
+  </p>
+</div>
+
+
+<!-- 38. Task [ngStyle] - Changing the color of input field -->
+
+<form *ngIf="!formSubmitted" class="login-box">
+  <h1>Submit Form</h1>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="nm"
+      [ngStyle]="{ 'background-color': nm ? 'lightgreen' : '#ffb6c1' }"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      name="email"
+      [(ngModel)]="em"
+      [ngStyle]="{
+        'background-color': emailIsValid ? 'lightgreen' : '#ffb6c1'
+      }"
+      (input)="checkEmailValidation(em)"
+      autocomplete="off"
+      required
+    />
+  </div>
+
+  <button type="submit" (click)="showMessage()">Submit</button>
+</form>
+
+<p *ngIf="formSubmitted">Form submitted successfully</p>
