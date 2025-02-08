@@ -1,0 +1,141 @@
+<h2>grouping-elements works!</h2>
+
+<h1>Normal Division</h1>
+<div>
+  <p>item 1</p>
+  <p>item 2</p>
+  <p>item 3</p>
+  <p>item 4</p>
+</div>
+
+<!-- 39. Grouping elements with ng-container -->
+<h1>ng-container</h1>
+<!-- ng-container used when grouping elements without adding or rendering extra element inside the DOM -->
+<ng-container>
+  <p>item 1</p>
+  <p>item 2</p>
+  <p>item 3</p>
+  <p>item 4</p>
+</ng-container>
+
+<div *ngFor="let subject of subjectList">
+  <div *ngIf="subject.subCode">
+    <span style="margin-right: 5px; font-size: 20px">Subject Code: {{ subject.subCode }},
+    </span>
+    <span style="font-size: 20px">Subject Name: {{ subject.name }}</span>
+  </div>
+</div>
+
+<!-- 40. HTML templates with ng-template
+ng-template is used to define a block of code that can be reused 
+or rendered multiple times inside the document.
+-->
+<ng-container *ngIf="isAuthorized; else notAuthorized">
+  <h1>Authorized User</h1>
+</ng-container>
+
+<ng-template #notAuthorized>
+  <h1>Not Authorized User</h1>
+</ng-template>
+
+<!-- just for grouping -->
+<ng-container *ngIf="listItems.length>0; else noItems">
+  <ul>
+    <li *ngFor="let item of listItems">{{ item }}</li>
+  </ul>
+</ng-container>
+<!-- for logical template switches, can be accessed by a reference variable -->
+<ng-template #noItems>
+  <p>No items to display</p>
+</ng-template>
+
+<!-- 42. Task - Display msg if input remains empty (ng-container & ng-template) -->
+
+<div class="box">
+  <div class="input-container">
+    <input type="text" [(ngModel)]="user" />
+    <label for="">Full Name</label>
+  </div>
+  <ng-container *ngIf="user !== ''; else notValid"></ng-container>
+  <ng-template #notValid>
+    <h3>Please enter your name</h3>
+  </ng-template>
+</div>
+
+
+<!-- 43. Rendering templates with `ngTemplateOutlet` - Part 1 -->
+<ng-template #show let-msg="showMessage">
+  <p style="font-size: 20px">{{ msg }}</p>
+</ng-template>
+<ng-container
+  *ngTemplateOutlet="
+  show; 
+  context: { showMessage: 'This is the context message' }
+  "></ng-container>
+
+<br />
+
+<ng-template #showCalc let-msg="showMessage">
+  <p style="font-size: 20px">Output: {{ msg }}</p>
+</ng-template>
+
+<!-- context provides data to <ng-template> -->
+<ng-container
+  *ngTemplateOutlet="
+  showCalc; 
+  context: { showMessage: calc() }
+  "></ng-container>
+
+<br />
+
+<ng-template #showPerson let-person="showMessage">
+  <p style="font-size: 20px">
+    My name is {{ person.name }}, and I am {{ person.age }} years old.
+    I'm living in {{ person.location }}
+  </p>
+</ng-template>
+
+<ng-container
+  *ngTemplateOutlet="
+  showPerson; 
+  context: { showMessage: showDetails }
+  "></ng-container>
+
+<hr />
+<!-- 44. Rendering templates with ngTemplateOutlet using `$implicit`- Part 2 -->
+
+<ng-template #implicitShowPerson let-person>
+  <p style="font-size: 20px">
+    My name is {{ person.name }}, and I am {{ person.age }} years old.
+    I'm living in {{ person.location }}
+  </p>
+</ng-template>
+
+<ng-container
+  *ngTemplateOutlet="
+  implicitShowPerson; 
+  context: { $implicit: showDetails }
+"></ng-container>
+
+<!-- 
+let-emp = employees
+-->
+<ng-template #employeeTable let-emp>
+  <table border="1">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Salary</th>
+    </tr>
+    <tr *ngFor="let e of emp">
+      <td>{{ e.id }}</td>
+      <td>{{ e.name }}</td>
+      <td>{{ e.salary }}</td>
+    </tr>
+  </table>
+</ng-template>
+<ng-container
+  *ngTemplateOutlet="
+    employeeTable;
+    context: {$implicit: employees}
+"></ng-container>

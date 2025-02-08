@@ -5,12 +5,14 @@ import { CartCalculationComponent } from './features/fundamental/cart-calculatio
 import { LoginComponent } from './features/auth/login/login.component';
 import { TodoListComponent } from './features/todos/todo-list/todo-list.component';
 import { DirectivesComponent } from './features/directives/directives.component';
+import { GroupingElementsComponent } from './features/grouping-elements/grouping-elements.component';
 
 export const routes: Routes = [
   { path: 'fundamental', component: FundamentalComponent },
   { path: 'template-driven-form', component: BindingComponent},
   { path: 'cart-calculation', component: CartCalculationComponent},
   { path: 'directives', component: DirectivesComponent},
+  { path: 'grouping-elements', component: GroupingElementsComponent},
   { path: 'login', component: LoginComponent },
   { path: 'todo', component: TodoListComponent },
 ];
