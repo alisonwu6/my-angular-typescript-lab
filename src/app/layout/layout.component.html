@@ -1,5 +1,5 @@
 <mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" opened>
+  <mat-sidenav #sidenav mode="side" closed>
     <mat-nav-list>
       <a *ngFor="let item of menuItems" mat-list-item [routerLink]="item.route">
         <mat-icon>{{ item.icon }}</mat-icon>
@@ -26,7 +26,7 @@
           <mat-icon>notifications</mat-icon>
         </button>
 
-        <button mat-icon-button>
+        <button mat-icon-button routerLink="/login">
           <mat-icon>account_circle</mat-icon>
         </button>
       </div>
