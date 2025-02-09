@@ -14,12 +14,12 @@ export class OnChangeChildComponent implements OnChanges {
   currentValue: string | undefined; // | undefined is used when uncertain of what value to initialize with a property
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('Calling from the ngOnChanges hook!');
+    // console.log('Calling from the ngOnChanges hook!');
 
     if (changes['inputValue']) {
       this.previousValue = changes['inputValue'].previousValue;
       this.currentValue = changes['inputValue'].currentValue;
-      console.log('changes: ', changes);
+      // console.log('changes: ', changes);
     }
 
     // 1. When the input data is changed.
