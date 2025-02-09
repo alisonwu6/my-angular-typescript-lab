@@ -7,6 +7,7 @@ import { TodoListComponent } from './features/todos/todo-list/todo-list.componen
 import { DirectivesComponent } from './features/directives/directives.component';
 import { GroupingElementsComponent } from './features/grouping-elements/grouping-elements.component';
 import { PortfolioComponent } from './page/portfolio/portfolio.component';
+import { LifecycleComponent } from './page/lifecycle/lifecycle.component';
 
 export const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
@@ -15,6 +16,7 @@ export const routes: Routes = [
   { path: 'cart-calculation', component: CartCalculationComponent},
   { path: 'directives', component: DirectivesComponent},
   { path: 'grouping-elements', component: GroupingElementsComponent},
+  { path: 'lifecycle', component: LifecycleComponent},
   { path: 'login', component: LoginComponent },
   { path: 'todo', component: TodoListComponent },
 ];

@@ -5,6 +5,7 @@ export const NAV_MENU = [
   { title: 'Cart Calculation', icon: '', route: '/cart-calculation' },
   { title: 'Directives', icon: '', route: '/directives' },
   { title: 'Grouping Elements', icon: '', route: '/grouping-elements' },
+  { title: 'Lifecycle', icon: '', route: '/lifecycle' },
   { title: 'To Do List', icon: '', route: '/todo' },
   { title: 'Dashboard', icon: '', route: '/dashboard' },
   { title: 'Users', icon: '', route: '/users' },
