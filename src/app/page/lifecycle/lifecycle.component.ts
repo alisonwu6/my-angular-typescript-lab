@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { DoCheckComponent } from './do-check/do-check.component';
 import { OnChangeIndexComponent } from './on-changes/on-change-index/on-change-index.component';
+import { DoCheckIndexComponent } from './do-check/do-check-index/do-check-index.component';
 
 @Component({
   selector: 'app-lifecycle',
-  imports: [OnChangeIndexComponent, DoCheckComponent],
+  imports: [
+    OnChangeIndexComponent,
+    DoCheckIndexComponent,
+  ],
   templateUrl: './lifecycle.component.html',
   styleUrl: './lifecycle.component.scss',
 })
@@ -16,7 +19,6 @@ export class LifecycleComponent implements OnInit {
     //   However, the constructor doesn't wait for the component's view to be fully rendered.
   }
 
-  // ngOnInit - Begins
   count: number = 0;
   counterInterval: any;
   startCounter() {
@@ -29,6 +31,7 @@ export class LifecycleComponent implements OnInit {
       }
     }, 1000);
   }
+  
   ngOnInit(): void {
     // console.log('[LC] - ngOnInit: Component has been initialized');
     // this.startCounter();
@@ -36,21 +39,6 @@ export class LifecycleComponent implements OnInit {
     //   meaning that Angular has finished creating the component & has set up all its inputs.
     // - This is also before the component's view is rendered in the DOM, but it's after Angular has set up the data-bound properties.
   }
-  // ngOnInit - Ends
-
-  // ngDoCheck - Begins
-  // 1. Use the ngOnChanges) to check the limitations.
-  // 2. Refactor it using the ngDoCheck().
-  user = {
-    name: 'UserA',
-  };
-  changeUserName() {
-    this.user.name = 'UserB';
-    // Changing the entire user object would have triggered the change, but not for a particular object property.
-    // With the ngDoCheck) hook a custom change detection for a component can be created
-  }
-
-  // ngDoCheck - Ends
 
   // creation phases in order
   // (1) -> `constructor()`: constructor() gets called & object is created for the component. [Memory initialization] <-> [Browser DOM] the component is not completely rendered.
