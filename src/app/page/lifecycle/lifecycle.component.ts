@@ -4,6 +4,7 @@ import { DoCheckIndexComponent } from './do-check/do-check-index/do-check-index.
 import { AfterContainInitIndexComponent } from './afterContainInit/after-contain-init-index/after-contain-init-index.component';
 import { AfterContainCheckedIndexComponent } from './afterContainChecked/after-contain-checked-index/after-contain-checked-index.component';
 import { TestIndexComponent } from './test/test-index/test-index.component';
+import { DestroyIndexComponent } from './destroy/destroy-index/destroy-index.component';
 
 @Component({
   selector: 'app-lifecycle',
@@ -12,6 +13,7 @@ import { TestIndexComponent } from './test/test-index/test-index.component';
     DoCheckIndexComponent,
     AfterContainInitIndexComponent,
     AfterContainCheckedIndexComponent,
+    DestroyIndexComponent,
     TestIndexComponent
   ],
   templateUrl: './lifecycle.component.html',
