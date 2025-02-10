@@ -3,6 +3,7 @@ import { OnChangeIndexComponent } from './on-changes/on-change-index/on-change-i
 import { DoCheckIndexComponent } from './do-check/do-check-index/do-check-index.component';
 import { AfterContainInitIndexComponent } from './afterContainInit/after-contain-init-index/after-contain-init-index.component';
 import { AfterContainCheckedIndexComponent } from './afterContainChecked/after-contain-checked-index/after-contain-checked-index.component';
+import { TestIndexComponent } from './test/test-index/test-index.component';
 
 @Component({
   selector: 'app-lifecycle',
@@ -11,6 +12,7 @@ import { AfterContainCheckedIndexComponent } from './afterContainChecked/after-c
     DoCheckIndexComponent,
     AfterContainInitIndexComponent,
     AfterContainCheckedIndexComponent,
+    TestIndexComponent
   ],
   templateUrl: './lifecycle.component.html',
   styleUrl: './lifecycle.component.scss',
