@@ -1,6 +1,7 @@
 import {
   AfterContentChecked,
   AfterContentInit,
+  AfterViewChecked,
   AfterViewInit,
   Component,
   ContentChild,
@@ -15,7 +16,11 @@ import {
   styleUrl: './after-contain-checked-child.component.scss',
 })
 export class AfterContainCheckedChildComponent
-  implements AfterContentInit, AfterContentChecked, AfterViewInit
+  implements
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit,
+    AfterViewChecked
 {
   @ViewChild('wrapper') wrapper!: ElementRef;
   @ContentChild('contentWrapper') content!: ElementRef;
@@ -27,10 +32,11 @@ export class AfterContainCheckedChildComponent
   }
 
   ngAfterContentChecked(): void {
-    // console.log('child -> ngAfterContentChecked() was invoked...');
+    console.log('child -> ngAfterContentChecked() was invoked...');
   }
 
   ngAfterViewInit(): void {
+    console.log('child -> ngAfterViewInit() was invoked...');
     const divElement: HTMLElement = this.wrapper.nativeElement;
     divElement.style.color = 'maroon';
     divElement.style.fontSize = '15px';
@@ -52,6 +58,10 @@ export class AfterContainCheckedChildComponent
       Q3 - How do you ensure that tasks performed in ng after view init don't cause the expression has changed after it was checked error.
             check -> test-index file
     */
+  }
+
+  ngAfterViewChecked(): void {
+    console.log('child -> ngAfterViewChecked() was invoked...');
   }
 }
 

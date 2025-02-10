@@ -12,10 +12,10 @@ export class TestIndexComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     // console.log('ngAfterViewInit(): checking phase...');
-    this.stopInterval = setInterval(() => {
-      this.value = 'updated';
+    // this.stopInterval = setInterval(() => {
+      // this.value = 'updated';
       // console.log('ngAfterViewInit(): view updated...');
-      clearInterval(this.stopInterval);
-    }, 2000);
+      // clearInterval(this.stopInterval);
+    // }, 2000);
   }
 }
