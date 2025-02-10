@@ -1,0 +1,29 @@
+h2 {
+  text-align: center;
+  font-weight: 360;
+  color: goldenrod;
+  font-size: 45px;
+}
+
+pre {
+  font-size: 15px;
+  display: block;
+  background-color: #5d5c5c;
+  width: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px;
+  text-wrap: wrap;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.parent,
+.child {
+  border: 1px solid #ccc;
+  padding: 10px;
+}/*# sourceMappingURL=input-decorator-index.component.css.map */

@@ -9,6 +9,7 @@ import { GroupingElementsComponent } from './features/grouping-elements/grouping
 import { PortfolioComponent } from './page/portfolio/portfolio.component';
 import { LifecycleComponent } from './page/lifecycle/lifecycle.component';
 import { DecoratorIndexComponent } from './page/decorator/decorator-index/decorator-index.component';
+import { InputDecoratorIndexComponent } from './page/decorator/input-decorator-index/input-decorator-index.component';
 
 export const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
@@ -19,6 +20,7 @@ export const routes: Routes = [
   { path: 'grouping-elements', component: GroupingElementsComponent},
   { path: 'lifecycle', component: LifecycleComponent},
   { path: 'decorator', component: DecoratorIndexComponent},
+  { path: 'input-decorator', component: InputDecoratorIndexComponent},
   { path: 'login', component: LoginComponent },
   { path: 'todo', component: TodoListComponent },
 ];

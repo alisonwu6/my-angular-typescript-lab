@@ -7,6 +7,7 @@ export const NAV_MENU = [
   { title: 'Grouping Elements', icon: '', route: '/grouping-elements' },
   { title: 'Lifecycle', icon: '', route: '/lifecycle' },
   { title: 'Decorator', icon: '', route: '/decorator' },
+  { title: 'Input Decorator', icon: '', route: '/input-decorator' },
   { title: 'To Do List', icon: '', route: '/todo' },
   { title: 'Dashboard', icon: '', route: '/dashboard' },
   { title: 'Users', icon: '', route: '/users' },

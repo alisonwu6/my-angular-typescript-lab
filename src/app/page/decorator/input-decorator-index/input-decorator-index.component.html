@@ -1,0 +1,12 @@
+<p>input-decorator-index works!</p>
+
+<div class="container">
+  <div class="parent">
+    <h2>Data in App Component</h2>
+    <pre>{{ courses | json }}</pre>
+  </div>
+  <div class="child">
+    <h2>Child Component</h2>
+    <app-input-decorator-child [showData]="courses"></app-input-decorator-child>
+  </div>
+</div>
