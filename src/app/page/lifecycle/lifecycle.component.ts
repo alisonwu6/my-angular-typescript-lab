@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { OnChangeIndexComponent } from './on-changes/on-change-index/on-change-index.component';
 import { DoCheckIndexComponent } from './do-check/do-check-index/do-check-index.component';
 import { AfterContainInitIndexComponent } from './afterContainInit/after-contain-init-index/after-contain-init-index.component';
+import { AfterContainCheckedIndexComponent } from './afterContainChecked/after-contain-checked-index/after-contain-checked-index.component';
 
 @Component({
   selector: 'app-lifecycle',
   imports: [
     OnChangeIndexComponent,
     DoCheckIndexComponent,
-    AfterContainInitIndexComponent
+    AfterContainInitIndexComponent,
+    AfterContainCheckedIndexComponent,
   ],
   templateUrl: './lifecycle.component.html',
   styleUrl: './lifecycle.component.scss',
@@ -33,7 +35,7 @@ export class LifecycleComponent implements OnInit {
       }
     }, 1000);
   }
-  
+
   ngOnInit(): void {
     // console.log('[LC] - ngOnInit: Component has been initialized');
     // this.startCounter();
