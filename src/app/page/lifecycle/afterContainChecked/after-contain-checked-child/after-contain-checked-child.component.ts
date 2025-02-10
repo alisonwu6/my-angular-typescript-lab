@@ -36,7 +36,7 @@ export class AfterContainCheckedChildComponent
     divElement.style.fontSize = '15px';
     divElement.style.fontWeight = '300';
 
-    console.log('child -> AfterViewInit() was invoked...', this.wrapper);
+    // console.log('child -> AfterViewInit() was invoked...', this.wrapper);
     // So the ngAfterViewInit() hook is very handy when you want to perform tasks on the view of the component.
 
     /**
