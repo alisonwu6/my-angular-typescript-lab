@@ -8,6 +8,7 @@ import { DirectivesComponent } from './features/directives/directives.component'
 import { GroupingElementsComponent } from './features/grouping-elements/grouping-elements.component';
 import { PortfolioComponent } from './page/portfolio/portfolio.component';
 import { LifecycleComponent } from './page/lifecycle/lifecycle.component';
+import { DecoratorIndexComponent } from './page/decorator/decorator-index/decorator-index.component';
 
 export const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'directives', component: DirectivesComponent},
   { path: 'grouping-elements', component: GroupingElementsComponent},
   { path: 'lifecycle', component: LifecycleComponent},
+  { path: 'decorator', component: DecoratorIndexComponent},
   { path: 'login', component: LoginComponent },
   { path: 'todo', component: TodoListComponent },
 ];

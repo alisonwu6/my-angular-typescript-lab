@@ -1,0 +1,7 @@
+<p>decorator-index works!</p>
+
+<button (click)="showMsg()">Update Message</button>
+<app-decorator-child
+  [receiveMessage]="displayMessage"
+  [parentMessage]="displayMessageAliasFromIndex">
+</app-decorator-child>
