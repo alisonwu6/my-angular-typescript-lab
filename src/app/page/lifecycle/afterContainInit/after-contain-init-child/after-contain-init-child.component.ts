@@ -18,9 +18,9 @@ export class AfterContainInitChildComponent implements AfterContentInit {
   @ContentChild('contentWrapper') content!: ElementRef;
 
   ngAfterContentInit(): void {
-    console.log('child -> ngAfterContentInit() was invoked...');
-    console.log('child -> ngAfterContentInit() wrapper', this.wrapper);
-    console.log('child -> ngAfterContentInit() contentWrapper', this.content);
+    // console.log('child -> ngAfterContentInit() was invoked...');
+    // console.log('child -> ngAfterContentInit() wrapper', this.wrapper);
+    // console.log('child -> ngAfterContentInit() contentWrapper', this.content);
   }
 
   // Processing Steps

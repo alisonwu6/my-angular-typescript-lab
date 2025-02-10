@@ -23,7 +23,7 @@ export class AfterContainInitIndexComponent implements DoCheck {
   // }
 
   ngDoCheck(): void {
-    console.log('index -> #ngDoCheck()');
+    // console.log('index -> #ngDoCheck()');
   }
 
   sendDataToChild(): void {
