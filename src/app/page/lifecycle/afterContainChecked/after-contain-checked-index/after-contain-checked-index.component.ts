@@ -11,7 +11,7 @@ export class AfterContainCheckedIndexComponent implements DoCheck {
   dataFromParent: string = '';
 
   ngDoCheck(): void {
-    console.log('index -> #ngDoCheck()');
+    // console.log('index -> #ngDoCheck()');
   }
 
   sendDataToChild(): void {

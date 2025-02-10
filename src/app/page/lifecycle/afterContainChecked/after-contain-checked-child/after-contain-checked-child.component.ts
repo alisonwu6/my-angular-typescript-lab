@@ -32,11 +32,11 @@ export class AfterContainCheckedChildComponent
   }
 
   ngAfterContentChecked(): void {
-    console.log('child -> ngAfterContentChecked() was invoked...');
+    // console.log('child -> ngAfterContentChecked() was invoked...');
   }
 
   ngAfterViewInit(): void {
-    console.log('child -> ngAfterViewInit() was invoked...');
+    // console.log('child -> ngAfterViewInit() was invoked...');
     const divElement: HTMLElement = this.wrapper.nativeElement;
     divElement.style.color = 'maroon';
     divElement.style.fontSize = '15px';
@@ -61,7 +61,7 @@ export class AfterContainCheckedChildComponent
   }
 
   ngAfterViewChecked(): void {
-    console.log('child -> ngAfterViewChecked() was invoked...');
+    // console.log('child -> ngAfterViewChecked() was invoked...');
   }
 }
 
