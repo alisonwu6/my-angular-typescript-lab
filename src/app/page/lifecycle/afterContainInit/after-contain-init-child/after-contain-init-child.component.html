@@ -1,0 +1,31 @@
+<p>after-contain-init-child works!</p>
+
+<div>
+  <h3>Child Component</h3>
+  <div #wrapper>
+    <ng-content></ng-content>
+  </div>
+</div>
+
+<!-- 
+
+1. What is the ngAfterContentInit() lifecycle hook in Angular? 
+
+So this life cycle hook is called `once` after angular has fully initialized all the content projected into the component via ng content.
+It is primarily used in components that use content projection to perform logic that depends on the projected content.
+This hook is called only once after the first ng do check.
+
+
+2. The second question is when would you use ng after content init instead of ng on init?
+
+The ng after content init ensures that all the content provided by the parent component has been fully projected and initialized.
+It is useful when you need to access child elements or perform operations that depend on the final content.
+
+
+3. The last question is what will happen if you update the projected content after ng after content init is called.
+
+The ngAfterContentInit() hook `is called only once` & that is after the initial content projection.
+To handle updates to projected content, we would need to use other mechanisms like ngDoCheck() or reactive change detection.
+(@Input() decorator)
+
+-->

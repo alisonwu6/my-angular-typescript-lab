@@ -1,0 +1,15 @@
+<h1>after-contain-init-index works!</h1>
+
+<div>
+  <h2>Parent Component</h2>
+  <button (click)="sendDataToChild()">Generate Number</button>
+
+  <app-after-contain-init-child>
+    <!-- h3 will pass to <ng-content> -->
+    <h3>{{ dataFromParent }}</h3>
+    <div #contentWrapper>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium suscipit fugiat harum laudantium, quia similique repellat, quos voluptates blanditiis maiores et minus
+      reiciendis. Sapiente odit, hic optio tenetur quisquam blanditiis!
+    </div>
+  </app-after-contain-init-child>
+</div>

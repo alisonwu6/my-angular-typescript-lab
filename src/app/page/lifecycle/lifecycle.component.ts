@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { OnChangeIndexComponent } from './on-changes/on-change-index/on-change-index.component';
 import { DoCheckIndexComponent } from './do-check/do-check-index/do-check-index.component';
+import { AfterContainInitIndexComponent } from './afterContainInit/after-contain-init-index/after-contain-init-index.component';
 
 @Component({
   selector: 'app-lifecycle',
   imports: [
     OnChangeIndexComponent,
     DoCheckIndexComponent,
+    AfterContainInitIndexComponent
   ],
   templateUrl: './lifecycle.component.html',
   styleUrl: './lifecycle.component.scss',
