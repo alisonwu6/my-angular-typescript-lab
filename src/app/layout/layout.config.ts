@@ -9,6 +9,7 @@ export const NAV_MENU = [
   { title: 'Decorator', icon: '', route: '/decorator' },
   { title: 'Input Decorator', icon: '', route: '/input-decorator' },
   { title: 'Output Decorator', icon: '', route: '/output-decorator' },
+  { title: 'Input & Output', icon: '', route: '/input-output-decorator' },
   { title: 'To Do List', icon: '', route: '/todo' },
   { title: 'Dashboard', icon: '', route: '/dashboard' },
   { title: 'Users', icon: '', route: '/users' },

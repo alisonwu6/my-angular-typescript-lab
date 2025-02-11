@@ -1,0 +1,10 @@
+<h2>Parent</h2>
+
+<button (click)="addItem()">Add Item</button>
+
+<hr>
+
+<app-input-and-output-decorator-child
+  *ngIf="itemsArr.length > 0"
+  [items]="itemsArr"
+  (itemDeleted)="deleteItem($event)"></app-input-and-output-decorator-child>
