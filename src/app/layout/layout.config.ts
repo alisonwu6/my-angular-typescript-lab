@@ -12,6 +12,8 @@ export const NAV_MENU = [
   { title: 'Input & Output', icon: '', route: '/input-output-decorator' },
   { title: '@ViewChild', icon: '', route: '/view-child' },
   { title: '@ContainChild', icon: '', route: '/contain-child' },
+  { title: '@ContainChild', icon: '', route: '/contain-child' },
+  { title: '@HostBinding', icon: '', route: '/host-binding' },
   { title: 'To Do List', icon: '', route: '/todo' },
   { title: 'Dashboard', icon: '', route: '/dashboard' },
   { title: 'Users', icon: '', route: '/users' },

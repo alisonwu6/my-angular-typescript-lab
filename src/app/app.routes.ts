@@ -14,6 +14,7 @@ import { OutputDecoratorIndexComponent } from './page/decorator/output-decorator
 import { InputAndOutputDecoratorIndexComponent } from './page/decorator/input-and-output-decorator-index/input-and-output-decorator-index.component';
 import { ViewChildIndexComponent } from './page/decorator/view-child-index/view-child-index.component';
 import { ContainChildIndexComponent } from './page/decorator/contain-child-index/contain-child-index.component';
+import { HostBindingIndexComponent } from './page/decorator/host-binding-index/host-binding-index.component';
 
 export const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
@@ -29,6 +30,7 @@ export const routes: Routes = [
   { path: 'input-output-decorator', component: InputAndOutputDecoratorIndexComponent},
   { path: 'view-child', component: ViewChildIndexComponent},
   { path: 'contain-child', component: ContainChildIndexComponent},
+  { path: 'host-binding', component: HostBindingIndexComponent},
   { path: 'login', component: LoginComponent },
   { path: 'todo', component: TodoListComponent },
 ];
