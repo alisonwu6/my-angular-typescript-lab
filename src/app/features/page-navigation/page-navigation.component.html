@@ -1,11 +1,26 @@
 <p>page-navigation works!</p>
-<div>
-  <div *ngFor="let product of products | slice : startIndex : endIndex">
+
+<div class="product-grid">
+  <div
+    class="product-card"
+    *ngFor="let product of products | slice : startIndex : endIndex">
     <h2>{{ product.name }}</h2>
-    <img [src]="product.imageUrl" alt="Course Image" width="400px" />
+    <img [src]="product.imageUrl" alt="Course Image" />
   </div>
-  <div>
-    <button type="button" (click)="previousPage()">Previous</button>
-    <button type="button" (click)="nextPage()">Next</button>
+  <div class="btn-container">
+    <button type="button" (click)="previousPage()" [disabled]="startIndex == 0">
+      Previous
+    </button>
+    <button
+      type="button"
+      (click)="nextPage()"
+      [disabled]="endIndex >= products.length">
+      Next
+    </button>
   </div>
 </div>
+
+<!-- 
+When there are lesser number of pages to be displayed, using a slice pipe to navigate through pages is considered a convenient way to limit the number of elements displayed with the Ng4 directive. 
+Using the slice pipe allows you to display only some portion of the array while keeping the original array intact.
+-->
