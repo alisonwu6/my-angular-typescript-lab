@@ -15,6 +15,7 @@ export const NAV_MENU = [
   { title: '@ContainChild', icon: '', route: '/contain-child' },
   { title: '@HostBinding', icon: '', route: '/host-binding' },
   { title: 'Color Pick', icon: '', route: '/color-pick' },
+  { title: 'Pipe', icon: '', route: '/pipe' },
   { title: 'To Do List', icon: '', route: '/todo' },
   { title: 'Dashboard', icon: '', route: '/dashboard' },
   { title: 'Users', icon: '', route: '/users' },
