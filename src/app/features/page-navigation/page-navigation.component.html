@@ -1,0 +1,11 @@
+<p>page-navigation works!</p>
+<div>
+  <div *ngFor="let product of products | slice : startIndex : endIndex">
+    <h2>{{ product.name }}</h2>
+    <img [src]="product.imageUrl" alt="Course Image" width="400px" />
+  </div>
+  <div>
+    <button type="button" (click)="previousPage()">Previous</button>
+    <button type="button" (click)="nextPage()">Next</button>
+  </div>
+</div>
