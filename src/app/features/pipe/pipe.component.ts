@@ -21,6 +21,9 @@ export class PipeComponent {
 
   // 84. Understanding Slice Pipe
   sliceArr = ['ItemA', 'ItemB', 'ItemC', 'ItemD'];
+
+  // 87. Understanding Number pipe
+  pi: number = 3.14159;
 }
 
 /**
