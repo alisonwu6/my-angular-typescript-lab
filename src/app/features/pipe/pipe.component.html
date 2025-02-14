@@ -7,3 +7,21 @@ MM   -> 2 digits of month
 MMM  -> 3 letters character month
 MMMM -> full name of month
 -->
+
+<hr />
+
+
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>State</th>
+      <th>Salary</th>
+    </tr>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.name | titlecase }}</td>
+      <td>{{ emp.state | slice : 0 : 3 | uppercase }}</td>
+      <td>{{ emp.salary | currency : "USD" }}</td>
+    </tr>
+  </table>
+</div>
