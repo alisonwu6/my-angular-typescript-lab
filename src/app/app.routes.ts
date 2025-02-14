@@ -18,6 +18,7 @@ import { HostBindingIndexComponent } from './page/decorator/host-binding-index/h
 import { ColorPickerIndexComponent } from './page/decorator/color-picker-index/color-picker-index.component';
 import { PipeComponent } from './features/pipe/pipe.component';
 import { PageNavigationComponent } from './features/page-navigation/page-navigation.component';
+import { PoundToKgConverterComponent } from './features/pound-to-kg-converter/pound-to-kg-converter.component';
 
 export const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
@@ -37,6 +38,7 @@ export const routes: Routes = [
   { path: 'color-pick', component: ColorPickerIndexComponent},
   { path: 'pipe', component: PipeComponent},
   { path: 'pipe-page-navigation', component: PageNavigationComponent},
+  { path: 'pound-to-kg-converter', component: PoundToKgConverterComponent},
   { path: 'login', component: LoginComponent },
   { path: 'todo', component: TodoListComponent },
 ];

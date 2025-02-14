@@ -17,6 +17,7 @@ export const NAV_MENU = [
   { title: 'Color Pick', icon: '', route: '/color-pick' },
   { title: 'Pipe', icon: '', route: '/pipe' },
   { title: 'Page Navigation', icon: '', route: '/pipe-page-navigation' },
+  { title: 'Pound To Kg', icon: '', route: '/pound-to-kg-converter' },
   { title: 'To Do List', icon: '', route: '/todo' },
   { title: 'Dashboard', icon: '', route: '/dashboard' },
   { title: 'Users', icon: '', route: '/users' },
