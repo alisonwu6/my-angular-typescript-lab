@@ -5,6 +5,7 @@ import { SortNumbersPipe } from '../../shared/pipes/sort-numbers/sort-numbers.pi
 import { LetterCountPipe } from '../../shared/pipes/letter-count/letter-count.pipe';
 import { FormsModule } from '@angular/forms';
 import { IncrementCountPipe } from '../../shared/pipes/increment-count/increment-count.pipe';
+import { SumOfNumbersPipe } from '../../shared/pipes/sum-of-numbers/sum-of-numbers.pipe';
 
 @Component({
   selector: 'app-pipe',
@@ -14,7 +15,8 @@ import { IncrementCountPipe } from '../../shared/pipes/increment-count/increment
     SortNumbersPipe,
     LetterCountPipe,
     FormsModule,
-    IncrementCountPipe
+    IncrementCountPipe,
+    SumOfNumbersPipe,
   ],
   templateUrl: './pipe.component.html',
   styleUrl: './pipe.component.scss',
@@ -53,6 +55,12 @@ export class PipeComponent {
   countVal: number = 0;
   incrementCounter() {
     this.countVal++;
+  }
+
+  // 96. Impure Pipe
+  myArray = [1, 2, 3];
+  updateValue() {
+    this.myArray.push(5);
   }
 }
 
