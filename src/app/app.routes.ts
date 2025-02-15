@@ -21,6 +21,9 @@ import { PageNavigationComponent } from './features/page-navigation/page-navigat
 import { PoundToKgConverterComponent } from './features/pound-to-kg-converter/pound-to-kg-converter.component';
 import { JsonPipeComponent } from './features/json-pipe/json-pipe.component';
 import { NotFoundComponent } from './page/not-found/not-found.component';
+import { ParentComponent } from './page/parent/parent.component';
+import { Child1Component } from './page/parent/child1/child1.component';
+import { Child2Component } from './page/parent/child2/child2.component';
 
 export const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
@@ -42,6 +45,14 @@ export const routes: Routes = [
   { path: 'pipe-page-navigation', component: PageNavigationComponent},
   { path: 'pound-to-kg-converter', component: PoundToKgConverterComponent},
   { path: 'json-pipe', component: JsonPipeComponent},
+  { 
+    path: 'nesting-route',
+    component: ParentComponent,
+    children: [
+      { path: 'child1', component: Child1Component },
+      { path: 'child2', component: Child2Component },
+    ],
+  },
   { path: 'login', component: LoginComponent },
   { path: 'todo', component: TodoListComponent },
   { path: '**', component: NotFoundComponent },
