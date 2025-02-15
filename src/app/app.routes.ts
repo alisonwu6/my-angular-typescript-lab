@@ -24,6 +24,7 @@ import { NotFoundComponent } from './page/not-found/not-found.component';
 import { ParentComponent } from './page/parent/parent.component';
 import { Child1Component } from './page/parent/child1/child1.component';
 import { Child2Component } from './page/parent/child2/child2.component';
+import { EmployeeComponent } from './page/employee/employee.component';
 
 export const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
@@ -55,6 +56,7 @@ export const routes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: 'todo', component: TodoListComponent },
+  { path: 'employee/:id/:name', component: EmployeeComponent },
   { path: '',redirectTo: '/login', pathMatch: 'full' },  // redirectTo & pathMatch should be used together
   { path: '**', component: NotFoundComponent },
 ];

@@ -20,6 +20,7 @@ export const NAV_MENU = [
   { title: 'Pound To Kg', icon: '', route: '/pound-to-kg-converter' },
   { title: 'JSON Pipe', icon: '', route: '/json-pipe' },
   { title: 'Nesting Route', icon: '', route: '/nesting-route' },
+  { title: 'ActivatedRoute Employee', icon: '', route: '/employee/:id/:name' },
   { title: 'To Do List', icon: '', route: '/todo' },
   { title: 'Dashboard', icon: '', route: '/dashboard' },
   { title: 'Users', icon: '', route: '/users' },
