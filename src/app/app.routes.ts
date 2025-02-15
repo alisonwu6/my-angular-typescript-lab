@@ -55,5 +55,6 @@ export const routes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: 'todo', component: TodoListComponent },
+  { path: '',redirectTo: '/login', pathMatch: 'full' },  // redirectTo & pathMatch should be used together
   { path: '**', component: NotFoundComponent },
 ];
