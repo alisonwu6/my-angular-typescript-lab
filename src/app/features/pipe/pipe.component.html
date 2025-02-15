@@ -64,8 +64,21 @@ MMMM -> full name of month
   }
   <ul class="number-list">
     @for(number of numbers | sortNumbers: sortOrder; track number) {
-      <li>{{ number }}</li>
+    <li>{{ number }}</li>
     }
   </ul>
 </div>
 }
+
+<hr />
+
+<div class="letter-count-container">
+  <h1>Letter Count</h1>
+  <div class="inputbox">
+    <input type="text" required [(ngModel)]="stringVal" />
+    <span>Enter String</span>
+  </div>
+  <div class="result-container">
+    <p>{{ stringVal | letterCount }} letters</p>
+  </div>
+</div>

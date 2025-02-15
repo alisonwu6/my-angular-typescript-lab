@@ -2,10 +2,18 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { AppendTextPipe } from '../../shared/pipes/append-text/append-text.pipe';
 import { SortNumbersPipe } from '../../shared/pipes/sort-numbers/sort-numbers.pipe';
+import { LetterCountPipe } from '../../shared/pipes/letter-count/letter-count.pipe';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-pipe',
-  imports: [CommonModule, AppendTextPipe, SortNumbersPipe],
+  imports: [
+    CommonModule,
+    AppendTextPipe,
+    SortNumbersPipe,
+    LetterCountPipe,
+    FormsModule,
+  ],
   templateUrl: './pipe.component.html',
   styleUrl: './pipe.component.scss',
 })
@@ -35,6 +43,9 @@ export class PipeComponent {
   showSorting() {
     this.showList = true;
   }
+
+  // 94. Task - Creating Custom Pipe For Letter Count
+  stringVal: string = '';
 }
 
 /**

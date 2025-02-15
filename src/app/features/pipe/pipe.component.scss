@@ -56,3 +56,60 @@ li {
   font-size: 28px;
   text-align: center;
 }
+
+.letter-count-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  color: #fdfeff;
+  border-radius: 15px;
+  background-color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 45px;
+    margin: 0 auto;
+  }
+  .inputbox {
+    position: relative;
+    margin: 45px auto;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 50px;
+  }
+  input {
+    position: absolute;
+    color: #fdfeff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid #fdfeff;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+  }
+  span {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    font-size: 1em;
+    transition: 0.6s;
+    font-family: sans-serif;
+  }
+  input:focus ~ span,
+  input:valid ~ span {
+    transform: translateX(-13px) translateY(-35px);
+    font-size: 1em;
+  }
+  .result-container {
+    color: dodgerblue !important;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 250;
+  }
+}
