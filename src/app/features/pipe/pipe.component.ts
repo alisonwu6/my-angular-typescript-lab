@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { AppendTextPipe } from '../../shared/pipes/append-text/append-text.pipe';
+import { SortNumbersPipe } from '../../shared/pipes/sort-numbers/sort-numbers.pipe';
 
 @Component({
   selector: 'app-pipe',
-  imports: [CommonModule],
+  imports: [CommonModule, AppendTextPipe, SortNumbersPipe],
   templateUrl: './pipe.component.html',
   styleUrl: './pipe.component.scss',
 })
@@ -24,6 +26,15 @@ export class PipeComponent {
 
   // 87. Understanding Number pipe
   pi: number = 3.14159;
+
+  // 93. Task - Creating Custom Pipe For Sorting Numbers
+  numbers: number[] = [3, 5, 1, 4, 2];
+  sortOrder: 'asc' | 'desc' = 'asc';
+  showList: boolean = false;
+
+  showSorting() {
+    this.showList = true;
+  }
 }
 
 /**

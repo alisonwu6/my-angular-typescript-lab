@@ -46,3 +46,26 @@ MMMM -> full name of month
 2 digits after decimal
 2 Maximum length
 -->
+
+<h1>{{ "Custom" | appendText: " Pipe" }}</h1>
+
+<h1>Given Array: <span>[{{ numbers | sortNumbers: 'desc' }}]</span></h1>
+<div class="button-container">
+  <button type="button" (click)="sortOrder = 'asc'; showSorting()">Sort asc</button>
+  <button type="button" (click)="sortOrder = 'desc'; showSorting()">Sort desc</button>
+</div>
+
+@if(showList) {
+<div class="sorted-output">
+  @if(sortOrder === 'asc') {
+  <h2>Ascending Order</h2>
+  }@else if(sortOrder === 'desc') {
+  <h2>Descending Order</h2>
+  }
+  <ul class="number-list">
+    @for(number of numbers | sortNumbers: sortOrder; track number) {
+      <li>{{ number }}</li>
+    }
+  </ul>
+</div>
+}
