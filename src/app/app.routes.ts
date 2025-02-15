@@ -20,6 +20,7 @@ import { PipeComponent } from './features/pipe/pipe.component';
 import { PageNavigationComponent } from './features/page-navigation/page-navigation.component';
 import { PoundToKgConverterComponent } from './features/pound-to-kg-converter/pound-to-kg-converter.component';
 import { JsonPipeComponent } from './features/json-pipe/json-pipe.component';
+import { NotFoundComponent } from './page/not-found/not-found.component';
 
 export const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
@@ -43,4 +44,5 @@ export const routes: Routes = [
   { path: 'json-pipe', component: JsonPipeComponent},
   { path: 'login', component: LoginComponent },
   { path: 'todo', component: TodoListComponent },
+  { path: '**', component: NotFoundComponent },
 ];
