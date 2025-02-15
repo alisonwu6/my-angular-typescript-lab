@@ -4,6 +4,7 @@ import { AppendTextPipe } from '../../shared/pipes/append-text/append-text.pipe'
 import { SortNumbersPipe } from '../../shared/pipes/sort-numbers/sort-numbers.pipe';
 import { LetterCountPipe } from '../../shared/pipes/letter-count/letter-count.pipe';
 import { FormsModule } from '@angular/forms';
+import { IncrementCountPipe } from '../../shared/pipes/increment-count/increment-count.pipe';
 
 @Component({
   selector: 'app-pipe',
@@ -13,6 +14,7 @@ import { FormsModule } from '@angular/forms';
     SortNumbersPipe,
     LetterCountPipe,
     FormsModule,
+    IncrementCountPipe
   ],
   templateUrl: './pipe.component.html',
   styleUrl: './pipe.component.scss',
@@ -46,6 +48,12 @@ export class PipeComponent {
 
   // 94. Task - Creating Custom Pipe For Letter Count
   stringVal: string = '';
+
+  // 95. Pure Vs Impure Pipe
+  countVal: number = 0;
+  incrementCounter() {
+    this.countVal++;
+  }
 }
 
 /**
